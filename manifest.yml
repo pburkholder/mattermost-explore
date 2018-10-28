@@ -1,0 +1,15 @@
+---
+applications:
+- name: mattermost-coe
+  docker:
+    image: mattermost/mattermost-prod-app
+  instances: 1
+  memory: 1G
+  disk_quota: 256M
+  env:
+    DB_HOST: ((DB_HOST))
+    DB_PORT_NUMBER: ((DB_PORT_NUMBER))
+    MM_DBNAME: ((MM_DBNAME))
+    MM_USERNAME: ((MM_USERNAME))
+    MM_PASSWORD: ((MM_PASSWORD))
+
